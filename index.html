@@ -6,6 +6,8 @@
     <title>🌾 Smart Agriculture Assistant</title>
     
     <style>
+        /* ===== STYLE SAMA SEPERTI SEBELUMNYA ===== */
+        /* (copy semua style dari kode sebelumnya) */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -385,13 +387,13 @@
                 
                 <div style="background: #fff3e0; padding: 15px; border-radius: 10px; margin-bottom: 15px; border-left: 4px solid #ff6f00;">
                     <p style="color: #e65100; font-size: 13px;">📱 <strong>Instal di Layar Utama:</strong> Klik menu browser → "Install App"</p>
-                    <p style="color: #e65100; font-size: 12px; margin-top: 5px;">🌏 <strong>34 Provinsi</strong> | 🌱 <strong>15 Jenis Pupuk</strong> | 🐛 <strong>74 Jenis Hama</strong> | 📸 <strong>Upload Foto Produk</strong></p>
+                    <p style="color: #e65100; font-size: 12px; margin-top: 5px;">🌏 <strong>34 Provinsi</strong> | 🌱 <strong>15 Jenis Pupuk</strong> | 🐛 <strong>44 Jenis Hama</strong> | 📸 <strong>Upload Foto Produk</strong></p>
                 </div>
                 
                 <div class="stats">
                     <div class="stat-card"><div class="icon">📊</div><div class="title">Pupuk</div><div class="desc">15 jenis + rekomendasi</div></div>
                     <div class="stat-card"><div class="icon">🌦️</div><div class="title">Cuaca</div><div class="desc">34 provinsi</div></div>
-                    <div class="stat-card"><div class="icon">🐛</div><div class="title">Hama</div><div class="desc">74 jenis hama</div></div>
+                    <div class="stat-card"><div class="icon">🐛</div><div class="title">Hama</div><div class="desc">44 jenis hama</div></div>
                     <div class="stat-card"><div class="icon">💧</div><div class="title">Irigasi</div><div class="desc">4 sistem</div></div>
                     <div class="stat-card"><div class="icon">📦</div><div class="title">Pasar</div><div class="desc">Jual & edit hasil panen + foto</div></div>
                 </div>
@@ -483,11 +485,11 @@
             </div>
         </div>
 
-        <!-- PEST - DENGAN 74 JENIS HAMA -->
+        <!-- PEST -->
         <div id="pest" class="page">
             <div class="card">
                 <h2>🐛 DETEKSI & PENCEGAHAN HAMA</h2>
-                <p class="sub">Identifikasi hama berdasarkan gejala pada tanaman (74 Jenis Hama)</p>
+                <p class="sub">Identifikasi hama berdasarkan gejala pada tanaman (44 Jenis Hama)</p>
 
                 <div class="form-group">
                     <label>Pilih Tanaman</label>
@@ -701,10 +703,10 @@
         };
 
         // ============================================================
-        // DATA 74 JENIS HAMA (LENGKAP)
+        // DATA 44 JENIS HAMA
         // ============================================================
         const DATA_HAMA_TANAMAN = {
-            // ===== PADI (12 Jenis Hama) =====
+            // ===== PADI (8 Jenis Hama) =====
             'padi': {
                 'Daun menguning & kering': { 
                     hama: 'Wereng Coklat (Nilaparvata lugens)', 
@@ -753,34 +755,10 @@
                     risiko: 'Tinggi', 
                     pencegahan: 'Gunakan varietas tahan, tanam serentak', 
                     pengobatan: 'Cabut tanaman terserang, aplikasi insektisida untuk vektor' 
-                },
-                'Daun kuning oranye & kerdil': { 
-                    hama: 'Tungro (Virus Tungro)', 
-                    risiko: 'Sangat Tinggi', 
-                    pencegahan: 'Tanam varietas tahan, tanam serentak, sanitasi lahan', 
-                    pengobatan: 'Cabut tanaman terserang, kendalikan vektor wereng' 
-                },
-                'Bulir padi hampa & berbau': { 
-                    hama: 'Walang Sangit (Leptocorisa oratorius)', 
-                    risiko: 'Tinggi', 
-                    pencegahan: 'Tanam serentak, perangkap lampu', 
-                    pengobatan: 'Semprot insektisida berbahan aktif sipermetrin' 
-                },
-                'Bulir padi hitam & rusak': { 
-                    hama: 'Kepik Hitam (Scotinophara coarctata)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Jaga kebersihan lahan, tanam serentak', 
-                    pengobatan: 'Semprot insektisida berbahan aktif karbofuran' 
-                },
-                'Batang layu & malai putih': { 
-                    hama: 'Penggerek Batang Kuning (Tryporyza incertulas)', 
-                    risiko: 'Tinggi', 
-                    pencegahan: 'Tanam varietas tahan, perangkap lampu', 
-                    pengobatan: 'Semprot insektisida berbahan aktif fipronil' 
                 }
             },
             
-            // ===== JAGUNG (10 Jenis Hama) =====
+            // ===== JAGUNG (6 Jenis Hama) =====
             'jagung': {
                 'Batang berlubang & patah': { 
                     hama: 'Penggerek Batang Jagung (Ostrinia furnacalis)', 
@@ -817,34 +795,10 @@
                     risiko: 'Sedang', 
                     pencegahan: 'Semprot fungisida preventif', 
                     pengobatan: 'Semprot fungisida sistemik' 
-                },
-                'Daun berlubang & rusak parah': { 
-                    hama: 'Kumbang Daun (Diabrotica spp.)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Tanam serangga predator, semprot insektisida', 
-                    pengobatan: 'Semprot insektisida berbahan aktif sipermetrin' 
-                },
-                'Daun habis dimakan': { 
-                    hama: 'Ulat Jengkal (Chrysodeixis chalcites)', 
-                    risiko: 'Tinggi', 
-                    pencegahan: 'Tanam serangga predator', 
-                    pengobatan: 'Semprot insektisida organik (Bacillus thuringiensis)' 
-                },
-                'Daun menguning & berkerut': { 
-                    hama: 'Kutu Kebul (Bemisia tabaci)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Jaga kebersihan lahan', 
-                    pengobatan: 'Semprot minyak mineral atau insektisida' 
-                },
-                'Tanaman layu & mati': { 
-                    hama: 'Penggerek Akar (Diabrotica virgifera)', 
-                    risiko: 'Tinggi', 
-                    pencegahan: 'Rotasi tanaman, gunakan bibit sehat', 
-                    pengobatan: 'Aplikasi insektisida tanah' 
                 }
             },
             
-            // ===== KEDELAI (8 Jenis Hama) =====
+            // ===== KEDELAI (5 Jenis Hama) =====
             'kedelai': {
                 'Daun berlubang': { 
                     hama: 'Ulat Grayak (Spodoptera litura)', 
@@ -875,28 +829,10 @@
                     risiko: 'Tinggi', 
                     pencegahan: 'Rotasi tanaman, gunakan varietas tahan', 
                     pengobatan: 'Aplikasi nematisida, perbaiki kesuburan tanah' 
-                },
-                'Daun berlubang & rusak': { 
-                    hama: 'Kumbang Kacang (Callosobruchus chinensis)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Simpan hasil panen di tempat kering', 
-                    pengobatan: 'Semprot insektisida, fumigasi' 
-                },
-                'Daun menguning & keriting': { 
-                    hama: 'Lalat Kacang (Agromyza phaseoloni)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Jaga kebersihan lahan', 
-                    pengobatan: 'Semprot insektisida berbahan aktif sipermetrin' 
-                },
-                'Daun berlubang & keriting': { 
-                    hama: 'Penggerek Daun (Aproaerema modicella)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Tanam serangga predator', 
-                    pengobatan: 'Semprot insektisida organik' 
                 }
             },
             
-            // ===== SAYURAN (10 Jenis Hama) =====
+            // ===== SAYURAN (6 Jenis Hama) =====
             'sayuran': {
                 'Daun berlubang & habis': { 
                     hama: 'Ulat Grayak (Spodoptera exigua)', 
@@ -933,34 +869,10 @@
                     risiko: 'Tinggi', 
                     pencegahan: 'Rotasi tanaman, gunakan varietas tahan', 
                     pengobatan: 'Aplikasi nematisida' 
-                },
-                'Daun berlubang & rusak': { 
-                    hama: 'Kumbang Daun (Phyllotreta spp.)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Tanam serangga predator', 
-                    pengobatan: 'Semprot insektisida berbahan aktif sipermetrin' 
-                },
-                'Daun menguning & keriting': { 
-                    hama: 'Thrips (Thrips tabaci)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Jaga kebersihan lahan', 
-                    pengobatan: 'Semprot insektisida berbahan aktif imidakloprid' 
-                },
-                'Daun berlubang & habis': { 
-                    hama: 'Ulat Daun (Plutella xylostella)', 
-                    risiko: 'Tinggi', 
-                    pencegahan: 'Tanam serangga predator', 
-                    pengobatan: 'Semprot insektisida organik (Bacillus thuringiensis)' 
-                },
-                'Buah berlubang & busuk': { 
-                    hama: 'Penggerek Buah (Helicoverpa armigera)', 
-                    risiko: 'Tinggi', 
-                    pencegahan: 'Pasang perangkap feromon', 
-                    pengobatan: 'Semprot insektisida berbahan aktif sipermetrin' 
                 }
             },
             
-            // ===== BUAH (9 Jenis Hama) =====
+            // ===== BUAH (5 Jenis Hama) =====
             'buah': {
                 'Buah busuk & berlubang': { 
                     hama: 'Lalat Buah (Bactrocera spp.)', 
@@ -991,34 +903,10 @@
                     risiko: 'Tinggi', 
                     pencegahan: 'Rotasi tanaman', 
                     pengobatan: 'Aplikasi nematisida' 
-                },
-                'Buah berlubang & rusak': { 
-                    hama: 'Kumbang Buah (Conotrachelus nenuphar)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Pasang perangkap', 
-                    pengobatan: 'Semprot insektisida berbahan aktif sipermetrin' 
-                },
-                'Daun berlubang & keriting': { 
-                    hama: 'Penggerek Daun (Phyllocnistis citrella)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Tanam serangga predator', 
-                    pengobatan: 'Semprot insektisida organik' 
-                },
-                'Daun menggulung & rusak': { 
-                    hama: 'Ulat Penggulung Daun (Archips argyrospila)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Potong daun terserang', 
-                    pengobatan: 'Semprot insektisida berbahan aktif sipermetrin' 
-                },
-                'Daun & buah tertutup sisik': { 
-                    hama: 'Kutu Sisik (Aonidiella aurantii)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Jaga kebersihan lahan', 
-                    pengobatan: 'Semprot minyak mineral atau insektisida' 
                 }
             },
             
-            // ===== KOPI (8 Jenis Hama) =====
+            // ===== KOPI (5 Jenis Hama) =====
             'kopi': {
                 'Buah berlubang & biji rusak': { 
                     hama: 'Penggerek Buah Kopi (Hypothenemus hampei)', 
@@ -1049,28 +937,10 @@
                     risiko: 'Sedang', 
                     pencegahan: 'Semprot fungisida preventif', 
                     pengobatan: 'Semprot fungisida sistemik' 
-                },
-                'Cabang mati & layu': { 
-                    hama: 'Kumbang Cabang (Xyleborus spp.)', 
-                    risiko: 'Tinggi', 
-                    pencegahan: 'Potong cabang terserang', 
-                    pengobatan: 'Semprot insektisida berbahan aktif karbofuran' 
-                },
-                'Daun berlubang & rusak': { 
-                    hama: 'Penggerek Daun (Leucoptera coffeella)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Tanam serangga predator', 
-                    pengobatan: 'Semprot insektisida organik' 
-                },
-                'Daun tertutup sisik': { 
-                    hama: 'Kutu Sisik (Coccus viridis)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Jaga kebersihan lahan', 
-                    pengobatan: 'Semprot minyak mineral' 
                 }
             },
             
-            // ===== KAKAO (8 Jenis Hama) =====
+            // ===== KAKAO (5 Jenis Hama) =====
             'kakao': {
                 'Buah berlubang & busuk': { 
                     hama: 'Penggerek Buah Kakao (Acrocercops cramerella)', 
@@ -1101,28 +971,10 @@
                     risiko: 'Sangat Tinggi', 
                     pencegahan: 'Semprot fungisida preventif', 
                     pengobatan: 'Semprot fungisida sistemik' 
-                },
-                'Batang berlubang & mati': { 
-                    hama: 'Kumbang Penggerek (Xyleborus spp.)', 
-                    risiko: 'Tinggi', 
-                    pencegahan: 'Potong batang terserang', 
-                    pengobatan: 'Semprot insektisida berbahan aktif karbofuran' 
-                },
-                'Daun berlubang & rusak': { 
-                    hama: 'Penggerek Daun (Epiplema spp.)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Tanam serangga predator', 
-                    pengobatan: 'Semprot insektisida organik' 
-                },
-                'Daun & buah tertutup sisik': { 
-                    hama: 'Kutu Sisik (Lecanium spp.)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Jaga kebersihan lahan', 
-                    pengobatan: 'Semprot minyak mineral' 
                 }
             },
             
-            // ===== KARET (6 Jenis Hama) =====
+            // ===== KARET (4 Jenis Hama) =====
             'karet': {
                 'Daun berlubang & habis': { 
                     hama: 'Ulat Pemakan Daun Karet (Eurema spp.)', 
@@ -1147,22 +999,10 @@
                     risiko: 'Tinggi', 
                     pencegahan: 'Rotasi tanaman, gunakan bibit sehat', 
                     pengobatan: 'Aplikasi nematisida' 
-                },
-                'Daun berlubang & rusak': { 
-                    hama: 'Kumbang Daun (Alticinae spp.)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Tanam serangga predator', 
-                    pengobatan: 'Semprot insektisida berbahan aktif sipermetrin' 
-                },
-                'Daun tertutup sisik': { 
-                    hama: 'Kutu Sisik (Aonidiella spp.)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Jaga kebersihan lahan', 
-                    pengobatan: 'Semprot minyak mineral' 
                 }
             },
             
-            // ===== SAWIT (7 Jenis Hama) =====
+            // ===== SAWIT (5 Jenis Hama) =====
             'sawit': {
                 'Daun habis dimakan': { 
                     hama: 'Ulat Api (Setothosea asigna)', 
@@ -1193,22 +1033,10 @@
                     risiko: 'Sedang', 
                     pencegahan: 'Jaga kebersihan lahan', 
                     pengobatan: 'Semprot minyak nimba' 
-                },
-                'Daun berlubang & rusak': { 
-                    hama: 'Kumbang Daun (Coelaenomenodera spp.)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Tanam serangga predator', 
-                    pengobatan: 'Semprot insektisida berbahan aktif sipermetrin' 
-                },
-                'Pelepah rusak & mati': { 
-                    hama: 'Penggerek Pelepah (Tirathaba rufivena)', 
-                    risiko: 'Tinggi', 
-                    pencegahan: 'Potong pelepah terserang', 
-                    pengobatan: 'Semprot insektisida berbahan aktif karbofuran' 
                 }
             },
             
-            // ===== TEBU (6 Jenis Hama) =====
+            // ===== TEBU (5 Jenis Hama) =====
             'tebu': {
                 'Batang berlubang & patah': { 
                     hama: 'Penggerek Batang Tebu (Chilo auricilius)', 
@@ -1239,12 +1067,6 @@
                     risiko: 'Sedang', 
                     pencegahan: 'Semprot fungisida preventif', 
                     pengobatan: 'Semprot fungisida sistemik' 
-                },
-                'Batang berlubang & rusak': { 
-                    hama: 'Kumbang Tebu (Apogonia spp.)', 
-                    risiko: 'Sedang', 
-                    pencegahan: 'Jaga kebersihan lahan', 
-                    pengobatan: 'Semprot insektisida berbahan aktif sipermetrin' 
                 }
             }
         };
@@ -1379,8 +1201,7 @@
             
             document.getElementById('hasilHama').textContent = 
         `🐛 HASIL DETEKSI HAMA
-        ───────────────────────────────────────
-        Tanaman        : ${tanaman.charAt(0).toUpperCase() + tanaman.slice(1)}
+        ───────────────────────────────────────        Tanaman        : ${tanaman.charAt(0).toUpperCase() + tanaman.slice(1)}
         Gejala         : ${gejala}
         Hama           : ${hasil.hama}
         Risiko         : ${hasil.risiko}
@@ -1579,7 +1400,7 @@
         }
 
         // ============================================================
-        // MARKETPLACE
+        // MARKETPLACE - DENGAN FOTO TERSIMPAN DI LOCALSTORAGE
         // ============================================================
         let produkData = [];
         let editId = null;
@@ -1606,7 +1427,11 @@
         }
 
         function saveProduk() {
-            try { localStorage.setItem('produkData', JSON.stringify(produkData)); } catch(e) {}
+            try { 
+                localStorage.setItem('produkData', JSON.stringify(produkData)); 
+            } catch(e) {
+                console.error('Gagal menyimpan data:', e);
+            }
         }
 
         function renderProduk() {
@@ -1640,6 +1465,7 @@
 
         function refreshProduk() { loadProduk(); }
 
+        // ===== TAMBAH PRODUK =====
         function tambahProduk() {
             document.getElementById('tambahNama').value = '';
             document.getElementById('tambahJumlah').value = '';
@@ -1648,12 +1474,14 @@
             document.getElementById('tambahLokasi').value = '';
             document.getElementById('previewTambah').className = 'image-preview';
             document.getElementById('previewTambah').src = '';
+            document.getElementById('fotoProduk').value = '';
             fotoTambahData = null;
             document.getElementById('tambahModal').style.display = 'block';
         }
 
         function closeTambahModal() {
             document.getElementById('tambahModal').style.display = 'none';
+            fotoTambahData = null;
         }
 
         function previewFotoTambah(event) {
@@ -1677,12 +1505,14 @@
             const petani = document.getElementById('tambahPetani').value.trim();
             const lokasi = document.getElementById('tambahLokasi').value.trim();
             
-            if (!nama) return alert('Nama produk harus diisi!');
-            if (!jumlah || jumlah <= 0) return alert('Jumlah harus angka positif!');
-            if (!harga || harga <= 0) return alert('Harga harus angka positif!');
-            if (!petani) return alert('Nama petani harus diisi!');
+            if (!nama) return alert('❌ Nama produk harus diisi!');
+            if (!jumlah || jumlah <= 0) return alert('❌ Jumlah harus angka positif!');
+            if (!harga || harga <= 0) return alert('❌ Harga harus angka positif!');
+            if (!petani) return alert('❌ Nama petani harus diisi!');
             
             const newId = produkData.length > 0 ? Math.max(...produkData.map(p => p.id)) + 1 : 1;
+            
+            // 🔥 SIMPAN FOTO BERSAMA DATA PRODUK
             produkData.push({ 
                 id: newId, 
                 nama, 
@@ -1690,14 +1520,16 @@
                 harga, 
                 petani, 
                 lokasi: lokasi || '-',
-                foto: fotoTambahData
+                foto: fotoTambahData  // ← Foto tersimpan di LocalStorage
             });
-            saveProduk();
+            
+            saveProduk();  // ← Semua data termasuk foto tersimpan
             renderProduk();
             closeTambahModal();
             alert(`✅ Produk '${nama}' berhasil ditambahkan!`);
         }
 
+        // ===== EDIT PRODUK =====
         function openEditModal(id) {
             const produk = produkData.find(p => p.id === id);
             if (!produk) return;
@@ -1708,6 +1540,7 @@
             document.getElementById('editHarga').value = produk.harga;
             document.getElementById('editPetani').value = produk.petani;
             document.getElementById('editLokasi').value = produk.lokasi || '';
+            document.getElementById('editFotoProduk').value = '';
             
             const preview = document.getElementById('previewEdit');
             if (produk.foto) {
@@ -1726,6 +1559,7 @@
         function closeEditModal() {
             document.getElementById('editModal').style.display = 'none';
             editId = null;
+            fotoEditData = null;
         }
 
         function previewFotoEdit(event) {
@@ -1751,14 +1585,15 @@
             const petani = document.getElementById('editPetani').value.trim();
             const lokasi = document.getElementById('editLokasi').value.trim();
             
-            if (!nama) return alert('Nama produk harus diisi!');
-            if (!jumlah || jumlah <= 0) return alert('Jumlah harus angka positif!');
-            if (!harga || harga <= 0) return alert('Harga harus angka positif!');
-            if (!petani) return alert('Nama petani harus diisi!');
+            if (!nama) return alert('❌ Nama produk harus diisi!');
+            if (!jumlah || jumlah <= 0) return alert('❌ Jumlah harus angka positif!');
+            if (!harga || harga <= 0) return alert('❌ Harga harus angka positif!');
+            if (!petani) return alert('❌ Nama petani harus diisi!');
             
             const index = produkData.findIndex(p => p.id === editId);
-            if (index === -1) return alert('Produk tidak ditemukan!');
+            if (index === -1) return alert('❌ Produk tidak ditemukan!');
             
+            // 🔥 UPDATE FOTO BERSAMA DATA PRODUK
             produkData[index] = { 
                 ...produkData[index], 
                 nama, 
@@ -1766,22 +1601,24 @@
                 harga, 
                 petani, 
                 lokasi: lokasi || '-',
-                foto: fotoEditData
+                foto: fotoEditData  // ← Foto diperbarui dan tersimpan
             };
-            saveProduk();
+            
+            saveProduk();  // ← Langsung tersimpan di LocalStorage
             renderProduk();
             closeEditModal();
             alert('✅ Produk berhasil diperbarui!');
         }
 
         function hapusProduk(id) {
-            if (!confirm(`Yakin ingin menghapus produk ID ${id}?`)) return;
+            if (!confirm(`❓ Yakin ingin menghapus produk ID ${id}?`)) return;
             produkData = produkData.filter(p => p.id !== id);
             saveProduk();
             renderProduk();
             alert(`✅ Produk ID ${id} berhasil dihapus!`);
         }
 
+        // Tutup modal jika klik di luar
         window.onclick = function(event) {
             if (event.target === document.getElementById('editModal')) {
                 closeEditModal();
@@ -1792,12 +1629,17 @@
         }
 
         function cariProduk() {
-            const keyword = prompt('Masukkan kata kunci:');
+            const keyword = prompt('🔍 Masukkan kata kunci:');
             if (!keyword) return;
-            const hasil = produkData.filter(p => p.nama.toLowerCase().includes(keyword.toLowerCase()) || p.petani.toLowerCase().includes(keyword.toLowerCase()));
+            const hasil = produkData.filter(p => 
+                p.nama.toLowerCase().includes(keyword.toLowerCase()) || 
+                p.petani.toLowerCase().includes(keyword.toLowerCase())
+            );
             if (hasil.length === 0) { alert('❌ Tidak ada produk yang ditemukan.'); return; }
             let msg = `📋 HASIL PENCARIAN: '${keyword}'\n${'─'.repeat(40)}\n`;
-            hasil.forEach(p => { msg += `ID: ${p.id} | ${p.nama} | ${p.jumlah} kg | Rp ${p.harga.toLocaleString()}/kg | ${p.petani}\n`; });
+            hasil.forEach(p => { 
+                msg += `ID: ${p.id} | ${p.nama} | ${p.jumlah} kg | Rp ${p.harga.toLocaleString()}/kg | ${p.petani}\n`; 
+            });
             alert(msg);
         }
 
